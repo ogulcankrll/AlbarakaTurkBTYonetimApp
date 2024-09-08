@@ -22,12 +22,11 @@ namespace EntityLayer.Models
 
         // İlişkiler
         public virtual Departman Departman { get; set; }
-        public virtual KullaniciPersonel KullaniciPersonel { get; set; }
-        public virtual Yonetici Yonetici { get; set; }  
         public virtual ICollection<ZimmetliUrun> ZimmetlenecekPersonel { get; set; }
 
         public PersonelProfil()
         {
+           
             BaslangicTarihi = DateTime.Now;
             ZimmetlenecekPersonel=new HashSet<ZimmetliUrun>();
         }

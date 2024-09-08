@@ -15,7 +15,7 @@ namespace BusinessLogicLayer.GenericRepository
     public abstract class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {
 
-        MyContext db;
+        public MyContext db;
         public BaseRepository()
         {
             db = new MyContext();   

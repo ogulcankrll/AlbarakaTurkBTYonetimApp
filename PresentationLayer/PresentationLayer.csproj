@@ -56,33 +56,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmCozumVadisiGiris.cs">
+    <Compile Include="Forms\FrmCozumVadisiGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCozumVadisiGiris.Designer.cs">
+    <Compile Include="Forms\FrmCozumVadisiGiris.Designer.cs">
       <DependentUpon>FrmCozumVadisiGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmYoneticiAnaSayfa.cs">
+    <Compile Include="Forms\FrmYoneticiAnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmYoneticiAnaSayfa.Designer.cs">
+    <Compile Include="Forms\FrmYoneticiAnaSayfa.Designer.cs">
       <DependentUpon>FrmYoneticiAnaSayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmYoneticiGiris.cs">
+    <Compile Include="Forms\FrmYoneticiGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmYoneticiGiris.Designer.cs">
+    <Compile Include="Forms\FrmYoneticiGiris.Designer.cs">
       <DependentUpon>FrmYoneticiGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmCozumVadisiGiris.resx">
+    <Compile Include="UserControls\PersonelUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PersonelUC.Designer.cs">
+      <DependentUpon>PersonelUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\FrmCozumVadisiGiris.resx">
       <DependentUpon>FrmCozumVadisiGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmYoneticiAnaSayfa.resx">
+    <EmbeddedResource Include="Forms\FrmYoneticiAnaSayfa.resx">
       <DependentUpon>FrmYoneticiAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmYoneticiGiris.resx">
+    <EmbeddedResource Include="Forms\FrmYoneticiGiris.resx">
       <DependentUpon>FrmYoneticiGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -94,6 +100,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\PersonelUC.resx">
+      <DependentUpon>PersonelUC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

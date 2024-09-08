@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class mig1 : DbMigration
+    public partial class mig2 : DbMigration
     {
         public override void Up()
         {
@@ -24,7 +24,7 @@
                 "dbo.PersonelProfilleri",
                 c => new
                     {
-                        ID = c.Int(nullable: false),
+                        ID = c.Int(nullable: false, identity: true),
                         SicilNo = c.String(nullable: false, maxLength: 25),
                         Ad = c.String(nullable: false, maxLength: 25),
                         Soyad = c.String(nullable: false, maxLength: 20),
@@ -41,38 +41,7 @@
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.Departmanlar", t => t.DepartmanID, cascadeDelete: true)
-                .ForeignKey("dbo.KullaniciPersoneller", t => t.ID)
-                .ForeignKey("dbo.Yoneticis", t => t.ID)
-                .Index(t => t.ID)
                 .Index(t => t.DepartmanID);
-            
-            CreateTable(
-                "dbo.KullaniciPersoneller",
-                c => new
-                    {
-                        ID = c.Int(nullable: false, identity: true),
-                        KullaniciAdi = c.String(nullable: false, maxLength: 20),
-                        Sifre = c.String(nullable: false, maxLength: 35),
-                        YaratılmaTarihi = c.DateTime(name: "Yaratılma Tarihi", nullable: false),
-                        SilinmeTarihi = c.DateTime(name: "Silinme Tarihi"),
-                        GuncellenmeTarihi = c.DateTime(name: "Guncellenme Tarihi"),
-                        VeriDurumu = c.Int(name: "Veri Durumu", nullable: false),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.Yoneticis",
-                c => new
-                    {
-                        ID = c.Int(nullable: false, identity: true),
-                        KullaniciAdi = c.String(nullable: false, maxLength: 20),
-                        Sifre = c.String(nullable: false, maxLength: 25),
-                        YaratılmaTarihi = c.DateTime(name: "Yaratılma Tarihi", nullable: false),
-                        SilinmeTarihi = c.DateTime(name: "Silinme Tarihi"),
-                        GuncellenmeTarihi = c.DateTime(name: "Guncellenme Tarihi"),
-                        VeriDurumu = c.Int(name: "Veri Durumu", nullable: false),
-                    })
-                .PrimaryKey(t => t.ID);
             
             CreateTable(
                 "dbo.ZimmetliUrunler",
@@ -159,6 +128,34 @@
                     })
                 .PrimaryKey(t => t.ID);
             
+            CreateTable(
+                "dbo.KullaniciPersoneller",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        KullaniciAdi = c.String(nullable: false, maxLength: 20),
+                        Sifre = c.String(nullable: false, maxLength: 35),
+                        YaratılmaTarihi = c.DateTime(name: "Yaratılma Tarihi", nullable: false),
+                        SilinmeTarihi = c.DateTime(name: "Silinme Tarihi"),
+                        GuncellenmeTarihi = c.DateTime(name: "Guncellenme Tarihi"),
+                        VeriDurumu = c.Int(name: "Veri Durumu", nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.Yoneticis",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        KullaniciAdi = c.String(nullable: false, maxLength: 20),
+                        Sifre = c.String(nullable: false, maxLength: 25),
+                        YaratılmaTarihi = c.DateTime(name: "Yaratılma Tarihi", nullable: false),
+                        SilinmeTarihi = c.DateTime(name: "Silinme Tarihi"),
+                        GuncellenmeTarihi = c.DateTime(name: "Guncellenme Tarihi"),
+                        VeriDurumu = c.Int(name: "Veri Durumu", nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
         }
         
         public override void Down()
@@ -168,8 +165,6 @@
             DropForeignKey("dbo.Stoklar", "DepoID", "dbo.Depolar");
             DropForeignKey("dbo.Urunler", "KategoriID", "dbo.Kategoriler");
             DropForeignKey("dbo.ZimmetliUrunler", "PersonelProfilID", "dbo.PersonelProfilleri");
-            DropForeignKey("dbo.PersonelProfilleri", "ID", "dbo.Yoneticis");
-            DropForeignKey("dbo.PersonelProfilleri", "ID", "dbo.KullaniciPersoneller");
             DropForeignKey("dbo.PersonelProfilleri", "DepartmanID", "dbo.Departmanlar");
             DropIndex("dbo.Stoklar", new[] { "DepoID" });
             DropIndex("dbo.Stoklar", new[] { "UrunID" });
@@ -177,14 +172,13 @@
             DropIndex("dbo.ZimmetliUrunler", new[] { "UrunID" });
             DropIndex("dbo.ZimmetliUrunler", new[] { "PersonelProfilID" });
             DropIndex("dbo.PersonelProfilleri", new[] { "DepartmanID" });
-            DropIndex("dbo.PersonelProfilleri", new[] { "ID" });
+            DropTable("dbo.Yoneticis");
+            DropTable("dbo.KullaniciPersoneller");
             DropTable("dbo.Depolar");
             DropTable("dbo.Stoklar");
             DropTable("dbo.Kategoriler");
             DropTable("dbo.Urunler");
             DropTable("dbo.ZimmetliUrunler");
-            DropTable("dbo.Yoneticis");
-            DropTable("dbo.KullaniciPersoneller");
             DropTable("dbo.PersonelProfilleri");
             DropTable("dbo.Departmanlar");
         }

@@ -25,14 +25,12 @@ namespace BusinessLogicLayer.Services
 
         public bool YoneticiGirisi(string kullaniciAdi, string sifre)
         {
-            var yonetici = yoneticiRepo.IlkVeyaVarsayilan(x => x.KullaniciAdi == kullaniciAdi && x.Sifre == sifre);
-            return yonetici != null;
+            return yoneticiRepo.HerhangiBiriniKontrolEt(x => x.KullaniciAdi == kullaniciAdi && x.Sifre == sifre);
         }
 
         public bool PersonelGiris(string kullaniciAdi, string sifre)
         {
-            var personel = personelRepo.IlkVeyaVarsayilan(x => x.KullaniciAdi == kullaniciAdi && x.Sifre == sifre);
-            return personel != null;
+            return personelRepo.HerhangiBiriniKontrolEt(x => x.KullaniciAdi == kullaniciAdi && x.Sifre == sifre);
         }
 
     }

@@ -15,7 +15,7 @@ namespace PresentationLayer
     public partial class FrmYoneticiGiris : Form
     {
         GirisServis girisServis;
-        FrmYoneticiAnaSayfa frmYoneticiAnaSayfa = new FrmYoneticiAnaSayfa();
+        frmYoneticiAnaSayfa frmYoneticiAnaSayfa = new frmYoneticiAnaSayfa();
 
         public FrmYoneticiGiris()
         {

@@ -73,9 +73,17 @@
     <Compile Include="Mappings\Options\KullaniciPersonelMAP.cs" />
     <Compile Include="Mappings\Options\PersonelProfilMAP.cs" />
     <Compile Include="Mappings\Options\UrunMAP.cs" />
-    <Compile Include="Migrations\202408221241429_mig-1.cs" />
-    <Compile Include="Migrations\202408221241429_mig-1.Designer.cs">
-      <DependentUpon>202408221241429_mig-1.cs</DependentUpon>
+    <Compile Include="Migrations\202409071748246_mig2.cs" />
+    <Compile Include="Migrations\202409071748246_mig2.Designer.cs">
+      <DependentUpon>202409071748246_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409071817554_mig3.cs" />
+    <Compile Include="Migrations\202409071817554_mig3.Designer.cs">
+      <DependentUpon>202409071817554_mig3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409081227058_migVeriDDuzenleme.cs" />
+    <Compile Include="Migrations\202409081227058_migVeriDDuzenleme.Designer.cs">
+      <DependentUpon>202409081227058_migVeriDDuzenleme.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,8 +99,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202408221241429_mig-1.resx">
-      <DependentUpon>202408221241429_mig-1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202409071748246_mig2.resx">
+      <DependentUpon>202409071748246_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409071817554_mig3.resx">
+      <DependentUpon>202409071817554_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409081227058_migVeriDDuzenleme.resx">
+      <DependentUpon>202409081227058_migVeriDDuzenleme.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

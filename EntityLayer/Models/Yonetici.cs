@@ -8,10 +8,13 @@ namespace EntityLayer.Models
 {
     public class Yonetici:BaseEntity
     {
+        public string SicilNo { get; set; }
         public string KullaniciAdi { get; set; }
         public string Sifre { get; set; }
 
-        //İlişkiler
-        public virtual PersonelProfil YoneticiProfil { get; set; }
+        
+
+
+    
     }
 }

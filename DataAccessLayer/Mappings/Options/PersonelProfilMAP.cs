@@ -13,11 +13,11 @@ namespace DataAccessLayer.Mappings.Options
         {
             ToTable("PersonelProfilleri");
 
-           
+
 
             Property(p => p.SicilNo)
-                .IsRequired()
-                .HasMaxLength(25);
+                .IsRequired();
+                
 
             Property(p => p.Ad)
                 .IsRequired()

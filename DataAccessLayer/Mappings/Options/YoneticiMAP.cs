@@ -17,10 +17,7 @@ namespace DataAccessLayer.Mappings.Options
             Property(y=>y.Sifre)
                 .HasMaxLength (25)
                 .IsRequired();
-            HasOptional(y => y.YoneticiProfil)
-                .WithRequired(y => y.Yonetici);
-
-
+            
            
         }
     }

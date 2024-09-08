@@ -21,14 +21,7 @@ namespace DataAccessLayer.Mappings.Options
             Property(k => k.Sifre)
                 .IsRequired()
                 .HasMaxLength(35);
-
-            HasOptional(x => x.PersonelProfil)
-                .WithRequired(x => x.KullaniciPersonel);
-
-           
-                
-             
-
+;
         }
     }
 }
