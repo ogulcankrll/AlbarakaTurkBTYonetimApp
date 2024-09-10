@@ -9,7 +9,6 @@ namespace EntityLayer.Models
     public class Urun : BaseEntity
     {
        
-        public string UrunAdi { get; set; }
         public string MarkaModel { get; set; }
         public string SeriNumarasi { get; set; }
         public int KategoriID { get; set; }
