@@ -19,28 +19,30 @@ namespace DataAccessLayer.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new Mappings.Options.DepartmanMAP());
-            modelBuilder.Configurations.Add(new Mappings.Options.DepoMAP());
             modelBuilder.Configurations.Add(new Mappings.Options.KategoriMAP());
-            modelBuilder.Configurations.Add(new Mappings.Options.KullaniciPersonelMAP());
             modelBuilder.Configurations.Add(new Mappings.Options.PersonelProfilMAP());
             modelBuilder.Configurations.Add(new Mappings.Options.StokMAP());
             modelBuilder.Configurations.Add(new Mappings.Options.UrunMAP());
             modelBuilder.Configurations.Add(new Mappings.Options.YoneticiMAP());
-            modelBuilder.Configurations.Add(new Mappings.Options.ZimmetliUrunMAP());
+            modelBuilder.Configurations.Add(new Mappings.Options.StajyerMAP());
+            modelBuilder.Configurations.Add(new Mappings.Options.UrunKonumMap());
+            modelBuilder.Configurations.Add(new Mappings.Options.RaporMAP());
+            
            
 
 
         }
 
-        public DbSet<Departman> Departmanlar { get; set; }
-        public DbSet<Depo> Depolar { get; set; }
+        public DbSet<Departman> Departmanlar { get; set; }  
+        public DbSet<UrunKonumBilgi> urunKonumBilgileri { get; set; }
         public DbSet<Kategori> Kategoriler {  get; set; }   
-        public DbSet<KullaniciPersonel> KullaniciPersonel { get; set; }
         public DbSet<PersonelProfil> PersonelProfil { get; set; }
         public DbSet<Stok> Stoklar { get; set; }
         public DbSet<Urun> Urunler { get; set; }    
         public DbSet<Yonetici> Yonetici { get; set; }
-        public DbSet<ZimmetliUrun> ZimmetliUrun { get; set; }
+        public DbSet<Stajyer> Stajyer { get; set; }
+        public DbSet<Rapor>Raporlar { get; set; }
+        
 
 
 

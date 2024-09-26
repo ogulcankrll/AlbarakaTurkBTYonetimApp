@@ -12,9 +12,8 @@ namespace EntityLayer.Models
         public string KullaniciAdi { get; set; }
         public string Sifre { get; set; }
 
-        
+        //ilişkiler
+        public ICollection<Rapor> OnaylananOnayladigiRaporlar {  get; set; }    
 
-
-    
     }
 }

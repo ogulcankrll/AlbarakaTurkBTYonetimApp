@@ -10,5 +10,6 @@ namespace EntityLayer.DTO
     {
         public int DepartmanID { get; set; }
         public string DepartmanAd { get; set; }
+        public string DepartmanKat { get; set; }
     }
 }

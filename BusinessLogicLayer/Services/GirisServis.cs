@@ -1,4 +1,6 @@
 ﻿using BusinessLogicLayer.GenericRepository;
+using DataAccessLayer.GenericRepository;
+using EntityLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,27 +12,31 @@ namespace BusinessLogicLayer.Services
     public class GirisServis
     {
         private readonly YoneticiRepository yoneticiRepo;
-        private readonly KullaniciPersonelRepository personelRepo;
+        private readonly StajyerRepository stajyerRepo; 
+       
 
         public GirisServis(YoneticiRepository yoneticiRepository)
         {
             yoneticiRepo = yoneticiRepository;
         }
 
-        public GirisServis(KullaniciPersonelRepository kullaniciPersonelRepository)
+        public GirisServis(StajyerRepository stajyerRepository)
         {
-            personelRepo = kullaniciPersonelRepository;
-            
+            stajyerRepo = stajyerRepository;    
         }
 
         public bool YoneticiGirisi(string kullaniciAdi, string sifre)
         {
-            return yoneticiRepo.HerhangiBiriniKontrolEt(x => x.KullaniciAdi == kullaniciAdi && x.Sifre == sifre);
+
+           return  yoneticiRepo.HerhangiBiriniKontrolEt(x => x.KullaniciAdi == kullaniciAdi && x.Sifre == sifre);
+           
+
         }
 
-        public bool PersonelGiris(string kullaniciAdi, string sifre)
+        public int StajyerGirisi(string kullaniciAdi, string sifre)
         {
-            return personelRepo.HerhangiBiriniKontrolEt(x => x.KullaniciAdi == kullaniciAdi && x.Sifre == sifre);
+            var stajyer = stajyerRepo.IlkVeyaVarsayilan(x => x.KullaniciAdi == kullaniciAdi && x.Sifre == sifre);
+            return stajyer != null ? stajyer.ID : -1;
         }
 
     }

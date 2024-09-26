@@ -18,6 +18,5 @@ namespace EntityLayer.DTO
         public string DepartmanAdi { get; set; }
      
 
-
     }
 }

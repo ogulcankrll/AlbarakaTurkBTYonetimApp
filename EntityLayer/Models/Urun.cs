@@ -8,7 +8,7 @@ namespace EntityLayer.Models
 {
     public class Urun : BaseEntity
     {
-       
+      
         public string MarkaModel { get; set; }
         public string SeriNumarasi { get; set; }
         public int KategoriID { get; set; }
@@ -16,12 +16,12 @@ namespace EntityLayer.Models
         // İlişkiler
         public virtual Kategori Kategori { get; set; }
         public virtual ICollection<Stok> Stoklar { get; set; }
-        public virtual ICollection<ZimmetliUrun>ZimmetliUrun { get; set; }
+     
 
         public Urun()
         {
             Stoklar=new HashSet<Stok>();
-            ZimmetliUrun=new HashSet<ZimmetliUrun>();
+         
         }
 
     }

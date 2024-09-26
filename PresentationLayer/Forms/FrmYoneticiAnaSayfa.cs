@@ -48,20 +48,59 @@ namespace PresentationLayer
             MenuGecisi.Start(); 
         }
 
+        public void UserControlYukle(UserControl userControl)
+        {
+            pnlUC.Controls.Clear();
+            pnlUC.Controls.Add(userControl);
+            userControl.Dock = DockStyle.Fill;
+        }
+
         private void btnPersonel_Click(object sender, EventArgs e)
         {
-            UserControls.PersonelUC personelUC = new UserControls.PersonelUC();
-            pnlUC.Controls.Clear();
-            pnlUC.Controls.Add(personelUC);
-
-
+            UserControlYukle(new UserControls.PersonelUC());
         }
 
         private void btnCikisYap_Click(object sender, EventArgs e)
         {
-            FrmYoneticiGiris frmYoneticiGiris = new FrmYoneticiGiris(); 
-            frmYoneticiGiris.Show();    
+            FrmYoneticiGiris frmYoneticiGiris = new FrmYoneticiGiris();
+            frmYoneticiGiris.Show();
             this.Hide();
+        }
+
+        private void btnUrun_Click(object sender, EventArgs e)
+        {
+            UserControlYukle(new UserControls.EnvanterUC());
+        }
+
+        private void btnParametreler_Click(object sender, EventArgs e)
+        {
+            UserControlYukle(new UserControls.ParametreUC());
+        }
+
+        private void btnZimmetIslemleri_Click(object sender, EventArgs e)
+        {
+            UserControlYukle(new UserControls.UrunKonumUC());
+          
+        }
+
+        private void btnStajyerKayıt_Click(object sender, EventArgs e)
+        {
+            UserControlYukle(new UserControls.StajyerUC()); 
+        }
+
+        private void btnRaporlar_Click(object sender, EventArgs e)
+        {
+            UserControlYukle(new UserControls.RaporGoruntulemeUC());
+        }
+
+        private void btnAnaSyafa_Click(object sender, EventArgs e)
+        {
+            UserControlYukle(new UserControls.AnaSayfaUC());
+        }
+
+        private void frmYoneticiAnaSayfa_Load(object sender, EventArgs e)
+        {
+            UserControlYukle(new UserControls.AnaSayfaUC());
         }
     }
 }

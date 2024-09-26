@@ -15,7 +15,7 @@ namespace DataAccessLayer.Mappings.Options
                 .HasMaxLength(20)
                 .IsRequired();
             Property(y=>y.Sifre)
-                .HasMaxLength (25)
+                .HasMaxLength (50)
                 .IsRequired();
             
            

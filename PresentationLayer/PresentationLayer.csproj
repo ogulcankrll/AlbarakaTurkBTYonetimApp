@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,11 +57,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\FrmCozumVadisiGiris.cs">
+    <Compile Include="Forms\FrmDepartmanDetay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCozumVadisiGiris.Designer.cs">
-      <DependentUpon>FrmCozumVadisiGiris.cs</DependentUpon>
+    <Compile Include="Forms\FrmDepartmanDetay.Designer.cs">
+      <DependentUpon>FrmDepartmanDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmKategoriDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmKategoriDetay.Designer.cs">
+      <DependentUpon>FrmKategoriDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRaporYaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRaporYaz.Designer.cs">
+      <DependentUpon>FrmRaporYaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStajyerAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStajyerAnaSayfa.Designer.cs">
+      <DependentUpon>FrmStajyerAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStajyerDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStajyerDetay.Designer.cs">
+      <DependentUpon>FrmStajyerDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStajyerEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStajyerEkle.Designer.cs">
+      <DependentUpon>FrmStajyerEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStajyerGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStajyerGiris.Designer.cs">
+      <DependentUpon>FrmStajyerGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUrunYonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUrunYonetim.Designer.cs">
+      <DependentUpon>FrmUrunYonetim.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmYoneticiAnaSayfa.cs">
       <SubType>Form</SubType>
@@ -74,16 +117,80 @@
     <Compile Include="Forms\FrmYoneticiGiris.Designer.cs">
       <DependentUpon>FrmYoneticiGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DataGridViewYardimci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\AnaSayfaUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AnaSayfaUC.Designer.cs">
+      <DependentUpon>AnaSayfaUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ParametreUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ParametreUC.Designer.cs">
+      <DependentUpon>ParametreUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PersonelUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\PersonelUC.Designer.cs">
       <DependentUpon>PersonelUC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\FrmCozumVadisiGiris.resx">
-      <DependentUpon>FrmCozumVadisiGiris.cs</DependentUpon>
+    <Compile Include="UserControls\EnvanterUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EnvanterUC.Designer.cs">
+      <DependentUpon>EnvanterUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RaporGoruntulemeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RaporGoruntulemeUC.Designer.cs">
+      <DependentUpon>RaporGoruntulemeUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RaporYazmaUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RaporYazmaUC.Designer.cs">
+      <DependentUpon>RaporYazmaUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StajyerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StajyerUC.Designer.cs">
+      <DependentUpon>StajyerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UrunKonumUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UrunKonumUC.Designer.cs">
+      <DependentUpon>UrunKonumUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\FrmDepartmanDetay.resx">
+      <DependentUpon>FrmDepartmanDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmKategoriDetay.resx">
+      <DependentUpon>FrmKategoriDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRaporYaz.resx">
+      <DependentUpon>FrmRaporYaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStajyerAnaSayfa.resx">
+      <DependentUpon>FrmStajyerAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStajyerDetay.resx">
+      <DependentUpon>FrmStajyerDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStajyerEkle.resx">
+      <DependentUpon>FrmStajyerEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStajyerGiris.resx">
+      <DependentUpon>FrmStajyerGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUrunYonetim.resx">
+      <DependentUpon>FrmUrunYonetim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmYoneticiAnaSayfa.resx">
       <DependentUpon>FrmYoneticiAnaSayfa.cs</DependentUpon>
@@ -100,8 +207,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\AnaSayfaUC.resx">
+      <DependentUpon>AnaSayfaUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ParametreUC.resx">
+      <DependentUpon>ParametreUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PersonelUC.resx">
       <DependentUpon>PersonelUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EnvanterUC.resx">
+      <DependentUpon>EnvanterUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RaporGoruntulemeUC.resx">
+      <DependentUpon>RaporGoruntulemeUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RaporYazmaUC.resx">
+      <DependentUpon>RaporYazmaUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StajyerUC.resx">
+      <DependentUpon>StajyerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UrunKonumUC.resx">
+      <DependentUpon>UrunKonumUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

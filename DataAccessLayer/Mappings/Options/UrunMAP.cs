@@ -13,17 +13,13 @@ namespace DataAccessLayer.Mappings.Options
         {
             ToTable("Urunler");
           
-            Property(u => u.UrunAdi)
-                .IsRequired()
-                .HasMaxLength(100);
-
             Property(u => u.MarkaModel)
                 .IsRequired()
                 .HasMaxLength(100);
 
             Property(u => u.SeriNumarasi)
                 .IsRequired()
-                .HasMaxLength(100);
+                .HasMaxLength(80);
 
         
         }

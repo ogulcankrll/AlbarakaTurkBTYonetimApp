@@ -11,10 +11,9 @@ namespace EntityLayer.Models
     public class Stok:BaseEntity
     {
         public int UrunID { get; set; }
-        public int DepoID { get; set; }
         public int MevcutMiktar { get; set; }
         //İlişkiler
         public virtual Urun Urun { get; set; }
-        public virtual Depo Depo { get; set; }
+       
     }
 }

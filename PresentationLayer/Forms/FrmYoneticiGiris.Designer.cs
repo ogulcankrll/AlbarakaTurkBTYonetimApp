@@ -40,7 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.chbSifreGoster = new System.Windows.Forms.CheckBox();
             this.btnGirisYap = new System.Windows.Forms.Button();
-            this.lblKapat = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +66,7 @@
             this.btnCozumVadisiGiris.Name = "btnCozumVadisiGiris";
             this.btnCozumVadisiGiris.Size = new System.Drawing.Size(278, 47);
             this.btnCozumVadisiGiris.TabIndex = 6;
-            this.btnCozumVadisiGiris.Text = "Çözüm Vadisi";
+            this.btnCozumVadisiGiris.Text = "Stajyer Girişi";
             this.btnCozumVadisiGiris.UseVisualStyleBackColor = true;
             this.btnCozumVadisiGiris.Click += new System.EventHandler(this.btnCozumVadisiGiris_Click);
             // 
@@ -114,6 +113,7 @@
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(321, 35);
             this.txtKullaniciAdi.TabIndex = 1;
+            this.txtKullaniciAdi.Text = "usr0101";
             // 
             // label2
             // 
@@ -136,6 +136,7 @@
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(321, 35);
             this.txtSifre.TabIndex = 2;
+            this.txtSifre.Text = "b55";
             // 
             // label3
             // 
@@ -170,18 +171,6 @@
             this.btnGirisYap.UseVisualStyleBackColor = true;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
-            // lblKapat
-            // 
-            this.lblKapat.AutoSize = true;
-            this.lblKapat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblKapat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKapat.Location = new System.Drawing.Point(815, 9);
-            this.lblKapat.Name = "lblKapat";
-            this.lblKapat.Size = new System.Drawing.Size(24, 24);
-            this.lblKapat.TabIndex = 6;
-            this.lblKapat.Text = "X";
-            this.lblKapat.Click += new System.EventHandler(this.lblKapat_Click);
-            // 
             // FrmYoneticiGiris
             // 
             this.AcceptButton = this.btnGirisYap;
@@ -189,7 +178,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(852, 533);
-            this.Controls.Add(this.lblKapat);
             this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.chbSifreGoster);
             this.Controls.Add(this.label3);
@@ -198,11 +186,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtKullaniciAdi);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmYoneticiGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmGiris";
             this.Load += new System.EventHandler(this.FrmGiris_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -222,7 +210,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox chbSifreGoster;
         private System.Windows.Forms.Button btnGirisYap;
-        private System.Windows.Forms.Label lblKapat;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCozumVadisiGiris;

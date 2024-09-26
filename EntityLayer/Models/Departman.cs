@@ -10,6 +10,7 @@ namespace EntityLayer.Models
     public class Departman:BaseEntity
     {
         public string DepartmanAd{ get; set; }
+        public string DepartmanKat{ get; set; }
 
         //İlişkiler
         public virtual ICollection<PersonelProfil> PersonelProfilleri { get; set; }

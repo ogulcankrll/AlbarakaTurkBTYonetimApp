@@ -1,5 +1,6 @@
 ﻿using BusinessLogicLayer.GenericRepository;
 using BusinessLogicLayer.Services;
+using PresentationLayer.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,8 +45,8 @@ namespace PresentationLayer
 
         private void btnCozumVadisiGiris_Click(object sender, EventArgs e)
         {
-            FrmCozumVadisiGiris fr = new FrmCozumVadisiGiris();
-            fr.Show();
+            FrmStajyerGiris frmStajyerGiris = new FrmStajyerGiris();
+            frmStajyerGiris.Show();
             this.Hide();
         }
 

@@ -42,17 +42,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\DepartmanDTO.cs" />
+    <Compile Include="DTO\KategoriDTO.cs" />
     <Compile Include="DTO\PersonelProfilDTO.cs" />
+    <Compile Include="DTO\RaporDTO.cs" />
+    <Compile Include="DTO\StajyerDTO.cs" />
+    <Compile Include="DTO\UrunDTO.cs" />
+    <Compile Include="DTO\UrunKonumDTO.cs" />
     <Compile Include="Enums\DataStatus.cs" />
+    <Compile Include="Enums\UrunKonum.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Departman.cs" />
-    <Compile Include="Models\Depo.cs" />
-    <Compile Include="Models\ZimmetliUrun.cs" />
     <Compile Include="Models\Kategori.cs" />
-    <Compile Include="Models\KullaniciPersonel.cs" />
     <Compile Include="Models\PersonelProfil.cs" />
+    <Compile Include="Models\Rapor.cs" />
+    <Compile Include="Models\Stajyer.cs" />
     <Compile Include="Models\Stok.cs" />
     <Compile Include="Models\Urun.cs" />
+    <Compile Include="Models\UrunKonumBilgi.cs" />
     <Compile Include="Models\Yonetici.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

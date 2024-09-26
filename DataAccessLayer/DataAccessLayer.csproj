@@ -54,23 +54,23 @@
     <Compile Include="Context\MyContext.cs" />
     <Compile Include="GenericRepository\BaseRepository.cs" />
     <Compile Include="GenericRepository\DepartmanRepository.cs" />
-    <Compile Include="GenericRepository\DepoRepository.cs" />
     <Compile Include="GenericRepository\IntRep\IRepository.cs" />
     <Compile Include="GenericRepository\KategoriRepository.cs" />
-    <Compile Include="GenericRepository\KullaniciPersonelRepository.cs" />
     <Compile Include="GenericRepository\PersonelProfilRepository.cs" />
+    <Compile Include="GenericRepository\RaporRepository.cs" />
+    <Compile Include="GenericRepository\StajyerRepository.cs" />
     <Compile Include="GenericRepository\StokRepository.cs" />
+    <Compile Include="GenericRepository\UrunKonumRepository.cs" />
     <Compile Include="GenericRepository\UrunRepository.cs" />
     <Compile Include="GenericRepository\YoneticiRepository.cs" />
-    <Compile Include="GenericRepository\ZimmetliUrunRepository.cs" />
     <Compile Include="Mappings\Options\BaseMAP.cs" />
     <Compile Include="Mappings\Options\DepartmanMAP.cs" />
-    <Compile Include="Mappings\Options\DepoMAP.cs" />
+    <Compile Include="Mappings\Options\RaporMAP.cs" />
+    <Compile Include="Mappings\Options\StajyerMAP.cs" />
     <Compile Include="Mappings\Options\StokMAP.cs" />
+    <Compile Include="Mappings\Options\UrunKonumMap.cs" />
     <Compile Include="Mappings\Options\YoneticiMAP.cs" />
-    <Compile Include="Mappings\Options\ZimmetliUrunMAP.cs" />
     <Compile Include="Mappings\Options\KategoriMAP.cs" />
-    <Compile Include="Mappings\Options\KullaniciPersonelMAP.cs" />
     <Compile Include="Mappings\Options\PersonelProfilMAP.cs" />
     <Compile Include="Mappings\Options\UrunMAP.cs" />
     <Compile Include="Migrations\202409071748246_mig2.cs" />
@@ -84,6 +84,58 @@
     <Compile Include="Migrations\202409081227058_migVeriDDuzenleme.cs" />
     <Compile Include="Migrations\202409081227058_migVeriDDuzenleme.Designer.cs">
       <DependentUpon>202409081227058_migVeriDDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409101014072_MigDepartmanSatırEkle.cs" />
+    <Compile Include="Migrations\202409101014072_MigDepartmanSatırEkle.Designer.cs">
+      <DependentUpon>202409101014072_MigDepartmanSatırEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409102227302_migHataKontrol.cs" />
+    <Compile Include="Migrations\202409102227302_migHataKontrol.Designer.cs">
+      <DependentUpon>202409102227302_migHataKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409120750550_migZimmetIslem.cs" />
+    <Compile Include="Migrations\202409120750550_migZimmetIslem.Designer.cs">
+      <DependentUpon>202409120750550_migZimmetIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409121007523_MigYapıDegisikigi.cs" />
+    <Compile Include="Migrations\202409121007523_MigYapıDegisikigi.Designer.cs">
+      <DependentUpon>202409121007523_MigYapıDegisikigi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409122228240_migFormatDegisikligi.cs" />
+    <Compile Include="Migrations\202409122228240_migFormatDegisikligi.Designer.cs">
+      <DependentUpon>202409122228240_migFormatDegisikligi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409122316453_migYapıGuncellemeleri.cs" />
+    <Compile Include="Migrations\202409122316453_migYapıGuncellemeleri.Designer.cs">
+      <DependentUpon>202409122316453_migYapıGuncellemeleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409130801567_migGuncelleme.cs" />
+    <Compile Include="Migrations\202409130801567_migGuncelleme.Designer.cs">
+      <DependentUpon>202409130801567_migGuncelleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409161717523_migFonksiyonGuncellemesi.cs" />
+    <Compile Include="Migrations\202409161717523_migFonksiyonGuncellemesi.Designer.cs">
+      <DependentUpon>202409161717523_migFonksiyonGuncellemesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409162008108_migHataDüzelmeleri.cs" />
+    <Compile Include="Migrations\202409162008108_migHataDüzelmeleri.Designer.cs">
+      <DependentUpon>202409162008108_migHataDüzelmeleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409171724122_RaporFonksiyonu.cs" />
+    <Compile Include="Migrations\202409171724122_RaporFonksiyonu.Designer.cs">
+      <DependentUpon>202409171724122_RaporFonksiyonu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409232157228_migRaporDuzenleme.cs" />
+    <Compile Include="Migrations\202409232157228_migRaporDuzenleme.Designer.cs">
+      <DependentUpon>202409232157228_migRaporDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409232159224_migHataDuzeltme.cs" />
+    <Compile Include="Migrations\202409232159224_migHataDuzeltme.Designer.cs">
+      <DependentUpon>202409232159224_migHataDuzeltme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409240017548_migMapDuzenlemeleri.cs" />
+    <Compile Include="Migrations\202409240017548_migMapDuzenlemeleri.Designer.cs">
+      <DependentUpon>202409240017548_migMapDuzenlemeleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +159,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202409081227058_migVeriDDuzenleme.resx">
       <DependentUpon>202409081227058_migVeriDDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409101014072_MigDepartmanSatırEkle.resx">
+      <DependentUpon>202409101014072_MigDepartmanSatırEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409102227302_migHataKontrol.resx">
+      <DependentUpon>202409102227302_migHataKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409120750550_migZimmetIslem.resx">
+      <DependentUpon>202409120750550_migZimmetIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409121007523_MigYapıDegisikigi.resx">
+      <DependentUpon>202409121007523_MigYapıDegisikigi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409122228240_migFormatDegisikligi.resx">
+      <DependentUpon>202409122228240_migFormatDegisikligi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409122316453_migYapıGuncellemeleri.resx">
+      <DependentUpon>202409122316453_migYapıGuncellemeleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409130801567_migGuncelleme.resx">
+      <DependentUpon>202409130801567_migGuncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409161717523_migFonksiyonGuncellemesi.resx">
+      <DependentUpon>202409161717523_migFonksiyonGuncellemesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409162008108_migHataDüzelmeleri.resx">
+      <DependentUpon>202409162008108_migHataDüzelmeleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409171724122_RaporFonksiyonu.resx">
+      <DependentUpon>202409171724122_RaporFonksiyonu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409232157228_migRaporDuzenleme.resx">
+      <DependentUpon>202409232157228_migRaporDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409232159224_migHataDuzeltme.resx">
+      <DependentUpon>202409232159224_migHataDuzeltme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409240017548_migMapDuzenlemeleri.resx">
+      <DependentUpon>202409240017548_migMapDuzenlemeleri.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

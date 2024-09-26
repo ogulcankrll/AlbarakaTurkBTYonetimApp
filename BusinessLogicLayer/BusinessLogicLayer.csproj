@@ -54,7 +54,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DepartmanServis.cs" />
     <Compile Include="Services\GirisServis.cs" />
+    <Compile Include="Services\KategoriServis.cs" />
     <Compile Include="Services\PersonelServis.cs" />
+    <Compile Include="Services\RaporServis.cs" />
+    <Compile Include="Services\StajyerServis.cs" />
+    <Compile Include="Services\UrunKonumServis.cs" />
+    <Compile Include="Services\UrunServis.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

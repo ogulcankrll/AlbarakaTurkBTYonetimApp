@@ -9,9 +9,8 @@ namespace BusinessLogicLayer.GenericRepository
 {
     public class DepartmanRepository:BaseRepository<Departman>
     {
-        public List<Departman> DepartmanlariGetir()
-        {
-            return TumunuGetir(); 
-        }
+       
+
+        
     }
 }

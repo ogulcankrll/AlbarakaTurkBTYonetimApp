@@ -36,15 +36,8 @@ namespace BusinessLogicLayer.Services
         public void PersonelSil(int id)
         {
             PersonelProfil personel = personelProfilRepository.Bul(id);
-            if (personel != null)
-            {
-                // Personeli siliyoruz
-                personelProfilRepository.Sil(personel);
-            }
-            else
-            {
-                throw new Exception("Personel bulunamadı.");
-            }
+            personelProfilRepository.Sil(personel);
+
         }
 
     }

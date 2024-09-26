@@ -15,7 +15,11 @@ namespace DataAccessLayer.Mappings.Options
            Property(d => d.DepartmanAd)
                 .IsRequired()
                 .HasMaxLength(70);
-           
+            Property(d => d.DepartmanKat)
+                .IsRequired()
+                .HasMaxLength(30);
+
+
         }
     }
 }
