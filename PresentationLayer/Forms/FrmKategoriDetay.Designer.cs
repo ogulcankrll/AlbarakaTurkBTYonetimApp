@@ -37,7 +37,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,14 +122,6 @@
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // entityCommand1
-            // 
-            this.entityCommand1.CommandTimeout = 0;
-            this.entityCommand1.CommandTree = null;
-            this.entityCommand1.Connection = null;
-            this.entityCommand1.EnablePlanCaching = true;
-            this.entityCommand1.Transaction = null;
-            // 
             // FrmKategoriDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -147,7 +138,6 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmKategoriDetay";
             this.Text = "Kategori Detay";
-            //this.Load += new System.EventHandler(this.FrmKategoriDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -163,6 +153,5 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
-        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
     }
 }

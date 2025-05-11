@@ -88,7 +88,6 @@
             this.tabPageDepartmanEkle.TabIndex = 0;
             this.tabPageDepartmanEkle.Text = "Departman Ekle";
             this.tabPageDepartmanEkle.UseVisualStyleBackColor = true;
-            //this.tabPageDepartmanEkle.Click += new System.EventHandler(this.tabPageDepartmanEkle_Click);
             // 
             // btnEkle
             // 
@@ -118,7 +117,6 @@
             // 
             // txtEkleID
             // 
-            this.txtEkleID.Enabled = false;
             this.txtEkleID.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtEkleID.Location = new System.Drawing.Point(151, 36);
             this.txtEkleID.Name = "txtEkleID";
@@ -203,7 +201,6 @@
             // 
             // txtGuncelleId
             // 
-            this.txtGuncelleId.Enabled = false;
             this.txtGuncelleId.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtGuncelleId.Location = new System.Drawing.Point(151, 36);
             this.txtGuncelleId.Name = "txtGuncelleId";
@@ -290,7 +287,6 @@
             // 
             // txtSilid
             // 
-            this.txtSilid.Enabled = false;
             this.txtSilid.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSilid.Location = new System.Drawing.Point(151, 36);
             this.txtSilid.Name = "txtSilid";
@@ -344,7 +340,6 @@
             this.MaximizeBox = false;
             this.Name = "FrmDepartmanDetay";
             this.Text = "Departman Detay";
-            //this.Load += new System.EventHandler(this.FrmDepartmanDetay_Load_1);
             this.tbCtrlDepartmanDetay.ResumeLayout(false);
             this.tabPageDepartmanEkle.ResumeLayout(false);
             this.tabPageDepartmanEkle.PerformLayout();

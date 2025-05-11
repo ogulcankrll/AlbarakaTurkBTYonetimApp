@@ -63,6 +63,12 @@
     <Compile Include="Forms\FrmDepartmanDetay.Designer.cs">
       <DependentUpon>FrmDepartmanDetay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmGirisYardim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGirisYardim.Designer.cs">
+      <DependentUpon>FrmGirisYardim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmKategoriDetay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\FrmDepartmanDetay.resx">
       <DependentUpon>FrmDepartmanDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGirisYardim.resx">
+      <DependentUpon>FrmGirisYardim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmKategoriDetay.resx">
       <DependentUpon>FrmKategoriDetay.cs</DependentUpon>
