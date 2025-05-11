@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStajyerEkle));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mskTC = new System.Windows.Forms.MaskedTextBox();
             this.txtSifreTekrar = new System.Windows.Forms.TextBox();
@@ -65,9 +66,11 @@
             // mskTC
             // 
             this.mskTC.Location = new System.Drawing.Point(202, 92);
+            this.mskTC.Mask = "00000000000";
             this.mskTC.Name = "mskTC";
             this.mskTC.Size = new System.Drawing.Size(460, 33);
             this.mskTC.TabIndex = 2;
+            this.mskTC.ValidatingType = typeof(int);
             // 
             // txtSifreTekrar
             // 
@@ -76,6 +79,7 @@
             this.txtSifreTekrar.Name = "txtSifreTekrar";
             this.txtSifreTekrar.Size = new System.Drawing.Size(460, 35);
             this.txtSifreTekrar.TabIndex = 5;
+            this.txtSifreTekrar.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -95,6 +99,7 @@
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(460, 35);
             this.txtSifre.TabIndex = 4;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -171,11 +176,14 @@
             this.AcceptButton = this.btnKaydet;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(743, 395);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnKaydet);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
             this.Name = "FrmStajyerEkle";
             this.Text = "FrmStajyerEkle";
             this.groupBox1.ResumeLayout(false);

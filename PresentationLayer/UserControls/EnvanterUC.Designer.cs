@@ -30,21 +30,21 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageUrunler = new System.Windows.Forms.TabPage();
             this.btnUrunAra = new System.Windows.Forms.Button();
             this.txtUrunAra = new System.Windows.Forms.TextBox();
             this.btnUrunYonetim = new System.Windows.Forms.Button();
             this.dataGridViewUrunler = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPageUrunler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunler)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -64,19 +64,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Envanter İşlemleri";
             // 
-            // tabPage2
+            // tabPageUrunler
             // 
-            this.tabPage2.Controls.Add(this.btnUrunAra);
-            this.tabPage2.Controls.Add(this.txtUrunAra);
-            this.tabPage2.Controls.Add(this.btnUrunYonetim);
-            this.tabPage2.Controls.Add(this.dataGridViewUrunler);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1407, 809);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Ürünler";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageUrunler.Controls.Add(this.btnUrunAra);
+            this.tabPageUrunler.Controls.Add(this.txtUrunAra);
+            this.tabPageUrunler.Controls.Add(this.btnUrunYonetim);
+            this.tabPageUrunler.Controls.Add(this.dataGridViewUrunler);
+            this.tabPageUrunler.Location = new System.Drawing.Point(4, 34);
+            this.tabPageUrunler.Name = "tabPageUrunler";
+            this.tabPageUrunler.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageUrunler.Size = new System.Drawing.Size(1407, 809);
+            this.tabPageUrunler.TabIndex = 1;
+            this.tabPageUrunler.Text = "Urunler";
+            this.tabPageUrunler.UseVisualStyleBackColor = true;
             // 
             // btnUrunAra
             // 
@@ -113,14 +113,14 @@
             this.dataGridViewUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUrunler.Location = new System.Drawing.Point(13, 82);
             this.dataGridViewUrunler.Name = "dataGridViewUrunler";
+            this.dataGridViewUrunler.ReadOnly = true;
             this.dataGridViewUrunler.Size = new System.Drawing.Size(1280, 643);
             this.dataGridViewUrunler.TabIndex = 0;
             this.dataGridViewUrunler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUrunler_CellClick);
-            this.dataGridViewUrunler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUrunler_CellContentClick);
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPageUrunler);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 69);
             this.tabControl1.Name = "tabControl1";
@@ -141,8 +141,8 @@
             this.Load += new System.EventHandler(this.EnvanterUC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPageUrunler.ResumeLayout(false);
+            this.tabPageUrunler.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunler)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -153,7 +153,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageUrunler;
         private System.Windows.Forms.Button btnUrunAra;
         private System.Windows.Forms.TextBox txtUrunAra;
         private System.Windows.Forms.Button btnUrunYonetim;

@@ -21,7 +21,8 @@ namespace PresentationLayer.UserControls
         public EnvanterUC()
         {
             InitializeComponent();
-           UrunServis = new UrunServis();
+            UrunServis = new UrunServis();
+            Helpers.DataGridViewYardimci.SatirRenklendir(dataGridViewUrunler);
 
         }
 
@@ -82,9 +83,6 @@ namespace PresentationLayer.UserControls
             }
         }
 
-        private void dataGridViewUrunler_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
     }
 }

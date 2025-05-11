@@ -146,6 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(792, 356);
             this.Controls.Add(this.cmbKategori);
             this.Controls.Add(this.btnGuncelle);
@@ -161,6 +162,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MinimizeBox = false;
             this.Name = "FrmUrunYonetim";
             this.Load += new System.EventHandler(this.FrmUrunYonetim_Load);
             this.ResumeLayout(false);

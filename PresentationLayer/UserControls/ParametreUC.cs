@@ -27,7 +27,9 @@ namespace PresentationLayer.UserControls
         {
             InitializeComponent();
             DepartmanServis = new DepartmanServis();
-            KategoriServis = new KategoriServis();  
+            KategoriServis = new KategoriServis();
+            Helpers.DataGridViewYardimci.SatirRenklendir(dataGridViewDepartmanlar);
+            Helpers.DataGridViewYardimci.SatirRenklendir(dataGridViewKategoriler);
         }
         private void DepartmanVerileriGetir()
         {
@@ -55,10 +57,6 @@ namespace PresentationLayer.UserControls
             KategorileriGetir();
 
         }
-
-
-        
-        
 
         private void btnDepartmanDetay_Click(object sender, EventArgs e)
         {
@@ -161,14 +159,6 @@ namespace PresentationLayer.UserControls
             }
         }
 
-        private void dataGridViewDepartmanlar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void DepartmanSayfasi_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -15,10 +15,11 @@ namespace PresentationLayer.Forms
     public partial class FrmStajyerGiris : Form
     {
         GirisServis GirisServis;
+
         public FrmStajyerGiris()
         {
             InitializeComponent();
-            StajyerRepository stajyerRepository = new StajyerRepository();  
+            StajyerRepository stajyerRepository = new StajyerRepository();
             GirisServis = new GirisServis(stajyerRepository);
         }
 
@@ -36,22 +37,29 @@ namespace PresentationLayer.Forms
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            string kullaniciAdi = txtKullaniciAdi.Text;
-            string sifre = txtSifre.Text;
+            string kullaniciAdi = txtKullaniciAdi.Text.Trim(); 
+            string sifre = txtSifre.Text.Trim(); 
 
-            // Stajyer girişini kontrol et ve ID'sini al
+           
+            if (string.IsNullOrWhiteSpace(kullaniciAdi) || string.IsNullOrWhiteSpace(sifre))
+            {
+                MessageBox.Show("Kullanıcı adı ve şifre boş olamaz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+
+       
             int stajyerId = GirisServis.StajyerGirisi(kullaniciAdi, sifre);
 
-            if (stajyerId > 0) // Giriş başarılıysa
+            if (stajyerId > 0) 
             {
-                // Ana sayfa formunu oluştur ve göster
+                
                 FrmStajyerAnaSayfa frmStajyerAnaSayfa = new FrmStajyerAnaSayfa(stajyerId);
                 frmStajyerAnaSayfa.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Kullanıcı adı veya şifre hatalı", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Kullanıcı adı veya şifre hatalı", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

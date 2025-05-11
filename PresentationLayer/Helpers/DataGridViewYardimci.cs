@@ -17,7 +17,7 @@ namespace PresentationLayer.Helpers
                 Color renk1 = Color.LightGray;
                 Color renk2 = Color.White;
 
-                // Satırın indeksine göre renk seçimi
+                
                 if (e.RowIndex % 2 == 0)
                 {
                     grid.Rows[e.RowIndex].DefaultCellStyle.BackColor = renk1;

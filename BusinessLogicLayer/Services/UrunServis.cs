@@ -40,7 +40,7 @@ namespace BusinessLogicLayer.Services
         }
         public void urunGuncelle(Urun urun)
         {
-            urunRepository.Guncelle(urun);
+            urunRepository.Guncelle(urun);                                       
         }
         public void urunSil(int id)
         {

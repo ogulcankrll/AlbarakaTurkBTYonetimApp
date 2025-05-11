@@ -26,6 +26,7 @@ namespace PresentationLayer.UserControls
         public UrunKonumUC()
         {
             InitializeComponent();
+            Helpers.DataGridViewYardimci.SatirRenklendir(dataGridViewUrunKonum);
 
         }
 
@@ -194,55 +195,10 @@ namespace PresentationLayer.UserControls
 
         private void dataGridViewUrunKonum_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                var secilenUrun = (UrunKonumDTO)dataGridViewUrunKonum.Rows[e.RowIndex].DataBoundItem;
-
-                txtID.Text = secilenUrun.ID.ToString();
-                cmbUrun.Text = $"{secilenUrun.MarkaModel} - Seri No: {secilenUrun.SeriNumarasi}";
-                cmbKonum.SelectedItem = secilenUrun.Konum;
-                richTxtAciklama.Text = secilenUrun.Aciklama;
-
-                if (secilenUrun.Konum == UrunKonum.GmPersonel)
-                {
-                    lblPersonel.Visible = true;
-                    cmbPersonel.Visible = true;
-                    cmbPersonel.Text = $"{secilenUrun.PersonelAdSoyad} - Sicil No: {secilenUrun.PersonelSicilNo}";
-                }
-                else
-                {
-                    lblPersonel.Visible = false;
-                    cmbPersonel.Visible = false;
-                }
-            }
-        }
-
-        private void btnGuncelle_Click(object sender, EventArgs e)
-        {
-            UrunKonumBilgi guncellenecekUrun = new UrunKonumBilgi
-            {
-                ID = Convert.ToInt32(txtID.Text),
-                UrunID = (int)cmbUrun.SelectedValue,
-                UrunKonum = (UrunKonum)cmbKonum.SelectedItem,
-                Aciklama = richTxtAciklama.Text,
-                GuncellenmeTarihi = DateTime.Now,
-                PersonelID=(int)cmbPersonel.SelectedValue,
-                VeriDurumu = DataStatus.Guncellendi
                 
-            };
-
-            
-            urunKonumServis.UrunKonumGuncelle(guncellenecekUrun);
-
-          
-            UrunKonumBilgisiListele();
-
-            MessageBox.Show("Ürün konum bilgisi başarıyla güncellendi.");
-
-            Temizle();
-
-
         }
+
+       
     }
 }
     

@@ -47,9 +47,6 @@
             this.btnArama = new System.Windows.Forms.Button();
             this.txtArama = new System.Windows.Forms.TextBox();
             this.dataGridViewUrunKonum = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.btnGuncelle = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,8 +78,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnGuncelle);
-            this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.richTxtAciklama);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.btnKaydet);
@@ -92,7 +87,6 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.cmbUrun);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.cmbKategori);
             this.panel2.Controls.Add(this.label2);
             this.panel2.ForeColor = System.Drawing.Color.Black;
@@ -121,7 +115,7 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(855, 310);
+            this.btnKaydet.Location = new System.Drawing.Point(976, 310);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(129, 40);
             this.btnKaydet.TabIndex = 2;
@@ -245,37 +239,9 @@
             this.dataGridViewUrunKonum.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUrunKonum.Location = new System.Drawing.Point(22, 58);
             this.dataGridViewUrunKonum.Name = "dataGridViewUrunKonum";
-            this.dataGridViewUrunKonum.ReadOnly = true;
             this.dataGridViewUrunKonum.Size = new System.Drawing.Size(1159, 315);
             this.dataGridViewUrunKonum.TabIndex = 0;
             this.dataGridViewUrunKonum.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUrunKonum_CellClick);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(971, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "ID:";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(1005, 8);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 33);
-            this.txtID.TabIndex = 4;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Location = new System.Drawing.Point(990, 310);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(115, 40);
-            this.btnGuncelle.TabIndex = 5;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // UrunKonumUC
             // 
@@ -320,8 +286,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnArama;
         private System.Windows.Forms.TextBox txtArama;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnGuncelle;
     }
 }

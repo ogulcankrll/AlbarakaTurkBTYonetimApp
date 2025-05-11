@@ -62,10 +62,21 @@ namespace PresentationLayer
 
         private void btnCikisYap_Click(object sender, EventArgs e)
         {
-            FrmYoneticiGiris frmYoneticiGiris = new FrmYoneticiGiris();
-            frmYoneticiGiris.Show();
-            this.Hide();
+            DialogResult dialogResult = MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Çıkış Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            
+            if (dialogResult == DialogResult.Yes)
+            {
+                FrmYoneticiGiris frmYoneticiGiris = new FrmYoneticiGiris();
+                frmYoneticiGiris.Show();
+                this.Hide();  
+            }
+            else
+            {
+                
+            }
         }
+
 
         private void btnUrun_Click(object sender, EventArgs e)
         {

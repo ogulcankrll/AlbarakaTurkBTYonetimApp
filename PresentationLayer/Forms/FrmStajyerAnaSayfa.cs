@@ -84,9 +84,17 @@ namespace PresentationLayer.Forms
 
         private void btnCikisYap_Click(object sender, EventArgs e)
         {
-            FrmStajyerGiris frmStajyerGiris = new FrmStajyerGiris();
-            frmStajyerGiris.Show();
-            this.Hide();
+            
+            DialogResult dialogResult = MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Çıkış Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            
+            if (dialogResult == DialogResult.Yes)
+            {
+                FrmStajyerGiris frmStajyerGiris = new FrmStajyerGiris();
+                frmStajyerGiris.Show();
+                this.Hide();  
+            }
+           
         }
 
         private void btnAnaSyafa_Click(object sender, EventArgs e)

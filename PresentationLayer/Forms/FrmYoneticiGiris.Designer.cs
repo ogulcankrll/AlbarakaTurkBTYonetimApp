@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmYoneticiGiris));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCozumVadisiGiris = new System.Windows.Forms.Button();
+            this.btnStajyerGiris = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.btnCozumVadisiGiris);
+            this.panel1.Controls.Add(this.btnStajyerGiris);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -56,19 +56,19 @@
             this.panel1.Size = new System.Drawing.Size(471, 533);
             this.panel1.TabIndex = 0;
             // 
-            // btnCozumVadisiGiris
+            // btnStajyerGiris
             // 
-            this.btnCozumVadisiGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCozumVadisiGiris.BackgroundImage")));
-            this.btnCozumVadisiGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCozumVadisiGiris.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCozumVadisiGiris.ForeColor = System.Drawing.Color.White;
-            this.btnCozumVadisiGiris.Location = new System.Drawing.Point(92, 462);
-            this.btnCozumVadisiGiris.Name = "btnCozumVadisiGiris";
-            this.btnCozumVadisiGiris.Size = new System.Drawing.Size(278, 47);
-            this.btnCozumVadisiGiris.TabIndex = 6;
-            this.btnCozumVadisiGiris.Text = "Stajyer Girişi";
-            this.btnCozumVadisiGiris.UseVisualStyleBackColor = true;
-            this.btnCozumVadisiGiris.Click += new System.EventHandler(this.btnCozumVadisiGiris_Click);
+            this.btnStajyerGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStajyerGiris.BackgroundImage")));
+            this.btnStajyerGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStajyerGiris.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnStajyerGiris.ForeColor = System.Drawing.Color.White;
+            this.btnStajyerGiris.Location = new System.Drawing.Point(92, 462);
+            this.btnStajyerGiris.Name = "btnStajyerGiris";
+            this.btnStajyerGiris.Size = new System.Drawing.Size(278, 47);
+            this.btnStajyerGiris.TabIndex = 6;
+            this.btnStajyerGiris.Text = "Stajyer Girişi";
+            this.btnStajyerGiris.UseVisualStyleBackColor = true;
+            this.btnStajyerGiris.Click += new System.EventHandler(this.btnStajyerGiris_Click);
             // 
             // label5
             // 
@@ -212,6 +212,6 @@
         private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnCozumVadisiGiris;
+        private System.Windows.Forms.Button btnStajyerGiris;
     }
 }

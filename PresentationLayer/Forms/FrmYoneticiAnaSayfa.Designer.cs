@@ -41,7 +41,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnEnvanter = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnZimmetIslemleri = new System.Windows.Forms.Button();
+            this.btnUrunKonum = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnParametreler = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -200,30 +200,30 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnZimmetIslemleri);
+            this.panel5.Controls.Add(this.btnUrunKonum);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel5.Location = new System.Drawing.Point(3, 195);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(247, 58);
             this.panel5.TabIndex = 2;
             // 
-            // btnZimmetIslemleri
+            // btnUrunKonum
             // 
-            this.btnZimmetIslemleri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(59)))), ((int)(((byte)(72)))));
-            this.btnZimmetIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZimmetIslemleri.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnZimmetIslemleri.ForeColor = System.Drawing.Color.White;
-            this.btnZimmetIslemleri.Image = ((System.Drawing.Image)(resources.GetObject("btnZimmetIslemleri.Image")));
-            this.btnZimmetIslemleri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnZimmetIslemleri.Location = new System.Drawing.Point(-14, -12);
-            this.btnZimmetIslemleri.Name = "btnZimmetIslemleri";
-            this.btnZimmetIslemleri.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnZimmetIslemleri.Size = new System.Drawing.Size(287, 81);
-            this.btnZimmetIslemleri.TabIndex = 3;
-            this.btnZimmetIslemleri.Text = "        Zimmet İşlemleri";
-            this.btnZimmetIslemleri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnZimmetIslemleri.UseVisualStyleBackColor = false;
-            this.btnZimmetIslemleri.Click += new System.EventHandler(this.btnZimmetIslemleri_Click);
+            this.btnUrunKonum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(59)))), ((int)(((byte)(72)))));
+            this.btnUrunKonum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunKonum.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunKonum.ForeColor = System.Drawing.Color.White;
+            this.btnUrunKonum.Image = ((System.Drawing.Image)(resources.GetObject("btnUrunKonum.Image")));
+            this.btnUrunKonum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrunKonum.Location = new System.Drawing.Point(-14, -12);
+            this.btnUrunKonum.Name = "btnUrunKonum";
+            this.btnUrunKonum.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnUrunKonum.Size = new System.Drawing.Size(287, 81);
+            this.btnUrunKonum.TabIndex = 3;
+            this.btnUrunKonum.Text = "        Ürün Takip";
+            this.btnUrunKonum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrunKonum.UseVisualStyleBackColor = false;
+            this.btnUrunKonum.Click += new System.EventHandler(this.btnZimmetIslemleri_Click);
             // 
             // panel6
             // 
@@ -390,7 +390,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnEnvanter;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnZimmetIslemleri;
+        private System.Windows.Forms.Button btnUrunKonum;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnAnaSyafa;
         private System.Windows.Forms.Panel panel6;

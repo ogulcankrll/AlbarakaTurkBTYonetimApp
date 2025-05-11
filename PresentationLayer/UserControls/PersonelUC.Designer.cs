@@ -294,7 +294,6 @@
             this.dataGridViewPersonel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewPersonel.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewPersonel.Name = "dataGridViewPersonel";
-            this.dataGridViewPersonel.ReadOnly = true;
             this.dataGridViewPersonel.Size = new System.Drawing.Size(1214, 558);
             this.dataGridViewPersonel.TabIndex = 0;
             this.dataGridViewPersonel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPersonel_CellClick);
@@ -351,7 +350,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);

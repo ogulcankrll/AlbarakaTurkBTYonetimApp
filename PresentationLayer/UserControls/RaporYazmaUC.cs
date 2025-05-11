@@ -15,17 +15,17 @@ namespace PresentationLayer.UserControls
     public partial class RaporYazmaUC : UserControl
     {
         private RaporServis RaporServis;
-        private int stajyerId; // Örneğin stajyerId'yi burada saklayabilirsiniz.
+        private int stajyerId; 
 
-        // Parametreli constructor
+      
         public RaporYazmaUC(int id)
         {
             InitializeComponent();
             RaporServis = new RaporServis();
-            stajyerId = id; // İD'yi saklayın.
+            stajyerId = id; 
         }
 
-        // Parametresiz constructor
+       
         public RaporYazmaUC()
         {
             InitializeComponent();
@@ -34,16 +34,24 @@ namespace PresentationLayer.UserControls
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+           
+            if (string.IsNullOrWhiteSpace(richTxtRapor.Text))
+            {
+                
+                MessageBox.Show("Lütfen rapor içeriğini doldurun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+
+            
             var rapor = new Rapor
             {
                 StajyerID = stajyerId,
                 Icerik = richTxtRapor.Text,
-              
             };
 
             RaporServis.RaporEkle(rapor);
             MessageBox.Show("Rapor başarıyla kaydedildi.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
+
     }
 }

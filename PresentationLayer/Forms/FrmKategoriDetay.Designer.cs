@@ -147,7 +147,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmKategoriDetay";
             this.Text = "Kategori Detay";
-            this.Load += new System.EventHandler(this.FrmKategoriDetay_Load);
+            //this.Load += new System.EventHandler(this.FrmKategoriDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

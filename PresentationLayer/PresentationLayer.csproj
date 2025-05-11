@@ -117,6 +117,12 @@
     <Compile Include="Forms\FrmYoneticiGiris.Designer.cs">
       <DependentUpon>FrmYoneticiGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UrunKonumDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UrunKonumDetay.Designer.cs">
+      <DependentUpon>UrunKonumDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\DataGridViewYardimci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmYoneticiGiris.resx">
       <DependentUpon>FrmYoneticiGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrunKonumDetay.resx">
+      <DependentUpon>UrunKonumDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

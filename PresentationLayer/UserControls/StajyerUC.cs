@@ -21,6 +21,7 @@ namespace PresentationLayer.UserControls
         {
             InitializeComponent();
             StajyerServis = new StajyerServis();
+            Helpers.DataGridViewYardimci.SatirRenklendir(dataGridViewStajyer);
         }
         
         public void StajyerBilgiListele()

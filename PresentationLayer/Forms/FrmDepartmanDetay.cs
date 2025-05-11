@@ -11,12 +11,10 @@ namespace PresentationLayer.Forms
         private DepartmanServis departmanServis;
         private DepartmanDTO departmanDTO;
 
-
         public FrmDepartmanDetay(DepartmanDTO departmanDTO)
         {
             InitializeComponent();
             this.departmanDTO = departmanDTO;
-            
 
             txtGuncelleId.Text = departmanDTO.DepartmanID.ToString();
             txtGuncelleAd.Text = departmanDTO.DepartmanAd;
@@ -24,64 +22,90 @@ namespace PresentationLayer.Forms
             txtSilid.Text = departmanDTO.DepartmanID.ToString();
             txtSilAd.Text = departmanDTO.DepartmanAd;
             richTxtSilBilgi.Text = departmanDTO.DepartmanKat;
-            tbCtrlDepartmanDetay.SelectedTab=tabPageDepartmanGuncelle;
-
+            tbCtrlDepartmanDetay.SelectedTab = tabPageDepartmanGuncelle;
         }
-
 
         public FrmDepartmanDetay()
         {
             InitializeComponent();
             departmanServis = new DepartmanServis();
-            
         }
 
-        private void FrmDepartmanDetay_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            var yeniDepartman = new Departman
+          
+            if (string.IsNullOrWhiteSpace(txtEkleAd.Text) || string.IsNullOrWhiteSpace(richTxtEkleBilgi.Text))
             {
-                DepartmanAd = txtEkleAd.Text,
-                DepartmanKat = richTxtEkleBilgi.Text
-            };
+                MessageBox.Show("Lütfen tüm alanları doldurun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            departmanServis.DepartmanEkle(yeniDepartman);
-            MessageBox.Show("Departman başarıyla eklendi.");
+            try
+            {
+                var yeniDepartman = new Departman
+                {
+                    DepartmanAd = txtEkleAd.Text,
+                    DepartmanKat = richTxtEkleBilgi.Text
+                };
+
+                departmanServis.DepartmanEkle(yeniDepartman);
+                MessageBox.Show("Departman başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+               
+                txtEkleAd.Clear();
+                richTxtEkleBilgi.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            var guncellenecekDepartman = new Departman
+           
+            if (string.IsNullOrWhiteSpace(txtGuncelleAd.Text) || string.IsNullOrWhiteSpace(richTxtGuncelleBilgi.Text))
             {
-                ID = Convert.ToInt32(txtGuncelleId.Text),
-                DepartmanAd = txtGuncelleAd.Text,
-                DepartmanKat = richTxtGuncelleBilgi.Text
-            };
+                MessageBox.Show("Lütfen tüm alanları doldurun.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            departmanServis.DepartmanGuncelle(guncellenecekDepartman);
-            MessageBox.Show("Departman başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                var guncellenecekDepartman = new Departman
+                {
+                    ID = Convert.ToInt32(txtGuncelleId.Text),
+                    DepartmanAd = txtGuncelleAd.Text,
+                    DepartmanKat = richTxtGuncelleBilgi.Text
+                };
+
+                departmanServis.DepartmanGuncelle(guncellenecekDepartman);
+                MessageBox.Show("Departman başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+       
         private void btnSil_Click(object sender, EventArgs e)
         {
-            int departmanID = Convert.ToInt32(txtSilid.Text);
+            try
+            {
+                int departmanID = Convert.ToInt32(txtSilid.Text);
 
-            departmanServis.DepartmanSil(departmanID);
-            MessageBox.Show("Departman başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                departmanServis.DepartmanSil(departmanID);
+                MessageBox.Show("Departman başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void FrmDepartmanDetay_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPageDepartmanEkle_Click(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }

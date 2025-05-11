@@ -41,7 +41,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -67,6 +67,7 @@
             this.dataGridViewStajyer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStajyer.Location = new System.Drawing.Point(25, 140);
             this.dataGridViewStajyer.Name = "dataGridViewStajyer";
+            this.dataGridViewStajyer.ReadOnly = true;
             this.dataGridViewStajyer.Size = new System.Drawing.Size(1202, 479);
             this.dataGridViewStajyer.TabIndex = 5;
             this.dataGridViewStajyer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStajyer_CellClick);

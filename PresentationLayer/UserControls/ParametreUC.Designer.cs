@@ -64,7 +64,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -104,6 +104,7 @@
             this.dataGridViewKategoriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewKategoriler.Location = new System.Drawing.Point(278, 82);
             this.dataGridViewKategoriler.Name = "dataGridViewKategoriler";
+            this.dataGridViewKategoriler.ReadOnly = true;
             this.dataGridViewKategoriler.Size = new System.Drawing.Size(628, 492);
             this.dataGridViewKategoriler.TabIndex = 12;
             this.dataGridViewKategoriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKategoriler_CellClick);
@@ -152,7 +153,6 @@
             this.DepartmanSayfasi.TabIndex = 0;
             this.DepartmanSayfasi.Text = "Departman";
             this.DepartmanSayfasi.UseVisualStyleBackColor = true;
-            this.DepartmanSayfasi.Click += new System.EventHandler(this.DepartmanSayfasi_Click);
             // 
             // btnDepartmanDetay
             // 
@@ -170,10 +170,10 @@
             this.dataGridViewDepartmanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDepartmanlar.Location = new System.Drawing.Point(278, 81);
             this.dataGridViewDepartmanlar.Name = "dataGridViewDepartmanlar";
+            this.dataGridViewDepartmanlar.ReadOnly = true;
             this.dataGridViewDepartmanlar.Size = new System.Drawing.Size(628, 492);
             this.dataGridViewDepartmanlar.TabIndex = 7;
             this.dataGridViewDepartmanlar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDepartmanlar_CellClick);
-            this.dataGridViewDepartmanlar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDepartmanlar_CellContentClick);
             // 
             // btnDepartmanAra
             // 

@@ -207,11 +207,10 @@ namespace PresentationLayer.UserControls
 
         private void dataGridViewPersonel_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
-            // İki farklı renk tanımlayın
+            
             Color renk1 = Color.LightGray;
             Color renk2 = Color.White;
-
-            // Eğer satırın index'i çiftse renk1, tekse renk2 kullanılsın
+           
             if (e.RowIndex % 2 == 0)
             {
                 dataGridViewPersonel.Rows[e.RowIndex].DefaultCellStyle.BackColor = renk1;

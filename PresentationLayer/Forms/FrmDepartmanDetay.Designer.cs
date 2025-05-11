@@ -88,7 +88,7 @@
             this.tabPageDepartmanEkle.TabIndex = 0;
             this.tabPageDepartmanEkle.Text = "Departman Ekle";
             this.tabPageDepartmanEkle.UseVisualStyleBackColor = true;
-            this.tabPageDepartmanEkle.Click += new System.EventHandler(this.tabPageDepartmanEkle_Click);
+            //this.tabPageDepartmanEkle.Click += new System.EventHandler(this.tabPageDepartmanEkle_Click);
             // 
             // btnEkle
             // 
@@ -344,7 +344,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmDepartmanDetay";
             this.Text = "Departman Detay";
-            this.Load += new System.EventHandler(this.FrmDepartmanDetay_Load_1);
+            //this.Load += new System.EventHandler(this.FrmDepartmanDetay_Load_1);
             this.tbCtrlDepartmanDetay.ResumeLayout(false);
             this.tabPageDepartmanEkle.ResumeLayout(false);
             this.tabPageDepartmanEkle.PerformLayout();

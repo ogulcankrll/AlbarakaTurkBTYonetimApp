@@ -1,37 +1,72 @@
 ﻿using BusinessLogicLayer.Services;
 using EntityLayer.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer.Forms
 {
     public partial class FrmStajyerEkle : Form
     {
-        StajyerServis stajyerServis;   
+        StajyerServis stajyerServis;
+
         public FrmStajyerEkle()
         {
             InitializeComponent();
-            stajyerServis = new StajyerServis();    
+            stajyerServis = new StajyerServis();
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            Stajyer eklenecekStajyer = new Stajyer
+            
+            if (string.IsNullOrWhiteSpace(txtAd.Text) ||
+                string.IsNullOrWhiteSpace(mskTC.Text) ||
+                string.IsNullOrWhiteSpace(txtKullaniciAdi.Text) ||
+                string.IsNullOrWhiteSpace(txtSifre.Text) ||
+                string.IsNullOrWhiteSpace(txtSifreTekrar.Text))
             {
-                AdSoyad = txtAd.Text,
-                TcNo=mskTC.Text,
-                KullaniciAdi=txtKullaniciAdi.Text,  
-                Sifre=txtSifre.Text,
-            };
-            stajyerServis.stajyerKayıtEkle(eklenecekStajyer);   
-            MessageBox.Show("Personel başarıyla eklendi.");
+                MessageBox.Show("Tüm alanlar doldurulmalıdır.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            
+            if (mskTC.Text.Length != 11)
+            {
+                MessageBox.Show("Geçerli bir TC numarası giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            
+            if (txtSifre.Text != txtSifreTekrar.Text)
+            {
+                MessageBox.Show("Şifreler uyuşmuyor. Lütfen şifrelerinizi kontrol edin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                
+                Stajyer eklenecekStajyer = new Stajyer
+                {
+                    AdSoyad = txtAd.Text,
+                    TcNo = mskTC.Text,
+                    KullaniciAdi = txtKullaniciAdi.Text,
+                    Sifre = txtSifre.Text
+                };
+
+                
+                stajyerServis.stajyerKayıtEkle(eklenecekStajyer);
+                MessageBox.Show("Stajyer başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtAd.Clear();
+                mskTC.Clear();
+                txtKullaniciAdi.Clear();
+                txtSifre.Clear();
+                txtSifreTekrar.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

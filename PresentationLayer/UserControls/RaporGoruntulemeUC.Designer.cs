@@ -41,7 +41,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -67,24 +67,25 @@
             this.dataGridViewRaporlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRaporlar.Location = new System.Drawing.Point(21, 81);
             this.dataGridViewRaporlar.Name = "dataGridViewRaporlar";
+            this.dataGridViewRaporlar.ReadOnly = true;
             this.dataGridViewRaporlar.Size = new System.Drawing.Size(1204, 220);
             this.dataGridViewRaporlar.TabIndex = 6;
             this.dataGridViewRaporlar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRaporlar_CellClick);
             // 
             // richTxticerik
             // 
-            this.richTxticerik.Enabled = false;
             this.richTxticerik.Location = new System.Drawing.Point(22, 374);
             this.richTxticerik.Name = "richTxticerik";
+            this.richTxticerik.ReadOnly = true;
             this.richTxticerik.Size = new System.Drawing.Size(1203, 311);
             this.richTxticerik.TabIndex = 7;
             this.richTxticerik.Text = "";
             // 
             // txtStajyer
             // 
-            this.txtStajyer.Enabled = false;
             this.txtStajyer.Location = new System.Drawing.Point(22, 326);
             this.txtStajyer.Name = "txtStajyer";
+            this.txtStajyer.ReadOnly = true;
             this.txtStajyer.Size = new System.Drawing.Size(264, 33);
             this.txtStajyer.TabIndex = 9;
             // 
